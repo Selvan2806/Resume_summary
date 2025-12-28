@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Summary Generator</title>
+    <meta name="description" content="Generate professional resume summaries instantly with our premium tool.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-gradients">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="container">
+        <header class="app-header">
+            <h1>Resume <span class="text-gradient">Architect</span></h1>
+            <p class="subtitle">Craft the perfect professional summary in seconds.</p>
+        </header>
+
+        <div class="glass-panel main-interface">
+            <section class="input-section">
+                <div class="form-group">
+                    <label for="jobTitle">Job Title</label>
+                    <input type="text" id="jobTitle" placeholder="e.g. Senior Product Designer" autocomplete="off">
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="number" id="experience" placeholder="e.g. 5" min="0">
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Key Skills <span class="label-note">(comma separated)</span></label>
+                    <textarea id="skills" placeholder="e.g. Figma, React, User Research, Prototyping" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="achievement">Top Achievement</label>
+                    <textarea id="achievement" placeholder="e.g. Increased user retention by 25% through UI redesign" rows="3"></textarea>
+                </div>
+
+                <button id="generateBtn" class="primary-btn">
+                    <span class="btn-text">Generate Summaries</span>
+                    <span class="btn-shine"></span>
+                </button>
+            </section>
+
+            <section class="output-section hidden" id="outputSection">
+                <div class="section-header">
+                    <h2>Generated Options</h2>
+                    <p>Choose the tone that fits you best.</p>
+                </div>
+                
+                <div class="results-grid" id="resultsGrid">
+                    <!-- Results will be injected here -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
